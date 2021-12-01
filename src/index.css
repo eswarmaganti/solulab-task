@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading {
+  @apply text-4xl text-center uppercase font-black text-primary py-3;
+  text-shadow: 4px 0px black;
+  letter-spacing: 4px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+  @apply py-2 px-3 rounded-full font-medium capitalize text-gray-800 shadow;
+}
+
+.btn-primary {
+  @apply border-2 border-gray-800;
+  background: linear-gradient(90deg, #00ff47 1.89%, #1cd9a0 100%);
+}
+.btn-primary-outline {
+  @apply border-2 border-primary;
+}
+.btn-white {
+  @apply bg-transparent border-2 border-gray-200;
+}
+
+.icon-btn {
+  @apply bg-white rounded-full p-3 shadow;
+}
+
+.link {
+  @apply font-medium text-gray-900;
+}
+.card-wrapper {
+}
+
+.card {
+  @apply border-2 border-black rounded-tl-3xl rounded-br-3xl;
+}
+.card-header img {
+  @apply rounded-tl-3xl;
+}
+.card-image {
+  @apply object-cover rounded-tl-3xl p-0 h-3/4;
+}
+.card-head-content {
+  @apply text-center p-4 border-t-2 border-black;
+}
+
+.card-body {
+  @apply relative w-10/12 px-10 pt-10 pb-24  mx-auto border-b-2 border-l-2 border-r-2 border-primary rounded-b-3xl;
+}
+.card-body li {
+  @apply font-medium py-2;
+}
+.card-actions {
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+/*----------------------- Landing Screen ----------------------*/
+.landing-screen {
+  height: 100vh;
+  background: url("./assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container-section {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.hero-image-container {
+  width: 50%;
 }
